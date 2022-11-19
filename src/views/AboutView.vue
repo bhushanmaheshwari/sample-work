@@ -1,6 +1,13 @@
+<script setup>
+import SiteHeader from '../components/SiteHeader.vue';
+</script>
+
 <template>
+  <header>
+    <site-header />
+  </header>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>This is an architecture page</h1>
   </div>
 </template>
 
