@@ -1,7 +1,10 @@
 <script setup>
+import { RouterLink } from "vue-router";
 </script>
 
-<template>Work sample card</template>
+<template>
+<a to="/worksample/1"> Work sample card </a>
+</template>
 
 <style>
 </style>
