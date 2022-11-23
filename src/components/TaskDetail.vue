@@ -1,3 +1,0 @@
-<template>
-    Task Detail
-</template>

@@ -1,44 +1,36 @@
-<script setup>
-import { RouterLink } from "vue-router";
-import SiteHeader from "../components/SiteHeader.vue";
-import WorkSampleList from "../components/WorkSampleList.vue";
+<script>
+import BaseButton from "../components/ui/BaseButton.vue";
+export default {
+  components: { BaseButton },
+  setup() {
+    const strategize = {
+      text: "Strategize",
+      to: "/strategy/need",
+    };
+    const worksmarter = {
+      text: "Work Smarter",
+      to: "/worksmarter",
+    };
+    const about = {
+      text: "About",
+      to: "/about",
+    };
+    return {
+      strategize,
+      worksmarter,
+      about,
+    };
+  },
+};
 </script>
 
-<template>
-  <header>
-    <site-header />
-  </header>
-  <main>
-    <work-sample-list />
-  </main>
-  <section class="hero is-light is-medium">
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <p class="title is-1">How it works</p>
-        <p class="subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex impedit,
-          nisi, maiores aperiam quisquam aliquam at corrupti expedita
-          consectetur enim doloremque dolor animi sapiente numquam eaque. Totam
-          deserunt unde earum?
-        </p>
-      </div>
-    </div>
 
-    <!-- Hero footer: will stick at the bottom -->
-    <div class="hero-foot">
-      <nav class="tabs">
-        <div class="container">
-          <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+<template>
+  <section>
+    <base-button :text="strategize.text" :to="strategize.to"></base-button>
+    <br />
+    <base-button :text="worksmarter.text" :to="worksmarter.to"></base-button>
+    <br />
+    <base-button :text="about.text" :to="about.to"></base-button>
   </section>
 </template>
