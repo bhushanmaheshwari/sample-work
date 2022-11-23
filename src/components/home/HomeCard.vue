@@ -1,36 +1,25 @@
 <script>
+// import { toRefs } from "vue";
 export default {
-  setup(props) {
-    return {
-      title : props.title,
-      subtitle : props.subtitle,
-      
-    };
-  },
+  props: ["title", "subtitle", "buttontext", "to"],
+  //   setup(props) {
+  //     const { title, subtitle, buttontext, to } = toRefs(props);
+  //     return {
+  //       title,
+  //       subtitle,
+  //       buttontext,
+  //       to,
+  //     };
+  //   },
 };
 </script>
 
 <template>
-  <div class="card">
-    <div class="card-content">
-      <p class="title">
-        “There are two hard things in computer science: cache invalidation,
-        naming things, and off-by-one errors.”
-      </p>
-      <p class="subtitle">Jeff Atwood</p>
-    </div>
-    <footer class="card-footer">
-      <p class="card-footer-item">
-        <span>
-          View on
-          <a href="https://twitter.com/codinghorror/status/506010907021828096"
-            >Twitter</a
-          >
-        </span>
-      </p>
-      <p class="card-footer-item">
-        <span> Share on <a href="#">Facebook</a> </span>
-      </p>
-    </footer>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">{{ title }}</p>
+      <p class="subtitle">{{ subtitle }}</p>
+      <base-button :text="buttontext" :to="to"></base-button>
+    </article>
   </div>
 </template>
