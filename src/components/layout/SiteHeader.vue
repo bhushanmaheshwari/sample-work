@@ -7,7 +7,7 @@ export default {
   setup() {
     const developer = ref("Bhushan Maheshwari");
     const animate = () => {
-      gsap.to(".animation-box", { rotation: 360, duration: 5, repeat: 100 });
+      gsap.to(".animation-box", { rotation: 360, duration: 5, repeat: 1 });
     };
     return {
       logo,
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <section class="is-flex is-align-items-center">
+  <section class="is-flex is-align-items-center is-justify-content-space-between">
     <router-link to="/" class="navbar-item">
       <img @click="animate" class="animation-box" :src="logo" style="max-height: 100px" />
     </router-link>

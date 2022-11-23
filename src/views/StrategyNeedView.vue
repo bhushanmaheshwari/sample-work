@@ -14,7 +14,9 @@ export default {
 
 <template>
   <section>
-    <base-button :text="strategize.text" :to="strategize.to"></base-button>
-    <br />
+    <div class="tile">
+      <base-button :text="strategize.text" :to="strategize.to"></base-button>
+      <br />
+    </div>
   </section>
 </template>

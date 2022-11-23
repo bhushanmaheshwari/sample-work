@@ -9,9 +9,9 @@ export default {
 </script>
 
 <template>
-  <section>
+  <section class="container is-fluid">
     <site-header></site-header>
-    <section class="section is-medium">
+    <section class="section">
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>

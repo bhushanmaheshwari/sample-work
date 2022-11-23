@@ -9,9 +9,15 @@ export default {
         "Faced with an existing system that uses a coupled templating engine like Smarty or Twig, how would you go about planning and executing a strategy for migrating the product to a headless frontend? Assume an existing PHP backend REST API is already available or can be extended to support it.",
     });
 
+    const bc = ref([
+      { text: "Home", route: "/", class: "" },
+      { text: "About", route: "", class: "is-active" },
+    ]);
+
     return {
       architecture,
-      headerInfo
+      headerInfo,
+      bc
     };
   },
 };
@@ -19,7 +25,11 @@ export default {
 
 <template>
   <section>
-    <base-title :title="headerInfo.title" :subtitle="headerInfo.subtitle" ></base-title>
+    <base-bc :bc="bc" />
+    <base-title
+      :title="headerInfo.title"
+      :subtitle="headerInfo.subtitle"
+    ></base-title>
     <img :src="architecture" />
   </section>
 </template>

@@ -1,15 +1,15 @@
 <script>
-
 export default {
   props: ["title", "subtitle"],
 };
 </script>
 
 <template>
-  <div class="content is-medium">
-    <h1>{{ title }}</h1>
-    <p>
-      {{ subtitle }}
-    </p>
-  </div>
+  <section class="box section">
+    <div class=" content is-large">
+      <h1>{{ title }}</h1>
+      <p :innerHTML="subtitle">
+      </p>
+    </div>
+  </section>
 </template>
