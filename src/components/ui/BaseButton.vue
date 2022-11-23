@@ -15,5 +15,5 @@ export default {
 </script>
 
 <template>
-  <router-link :to="to" class="button is-large">{{ buttonText }}</router-link>
+  <router-link :to="to" class="button is-large has-text-weight-medium">{{ buttonText }}</router-link>
 </template>

@@ -1,1 +1,5 @@
-export default {};
+export default {
+    setBreadcrumbs(state, payload) {
+        state.bc = payload;
+    }
+};

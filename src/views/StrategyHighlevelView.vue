@@ -8,8 +8,21 @@ export default {
     };
     return {
       strategize,
-      highlevel
+      highlevel,
     };
+  },
+  mounted() {
+    const bc = [
+      { text: "Home", route: "/", class: "" },
+      { text: "Strategize", route: "/strategy/need" },
+      {
+        text: "High-level planning",
+        route: "/strategy/highlevel",
+        class: "is-active",
+      },
+    ];
+
+    this.$store.dispatch("tasks/setBc", bc);
   },
 };
 </script>
