@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <section class="hero is-medium has-text-centered container pt-4 mt-4">
+  <section class="hero is-medium has-text-centered pt-4 mt-4">
     <router-link to="/">
       <img @click="animate" class="animation-box" :src="logo" style="max-height: 100px" />
     </router-link>

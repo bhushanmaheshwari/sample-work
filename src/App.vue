@@ -11,7 +11,7 @@ export default {
 <template>
   <section class="">
     <site-header />
-    <section class="">
+    <section class="container local-container-height">
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -45,5 +45,9 @@ export default {
 .route-leave-from {
   opacity: 1;
   transform: translateY(0);
+}
+
+.local-container-height {
+  min-height: 1000px;
 }
 </style>

@@ -1,11 +1,16 @@
 <script>
+import deepdive from "./../assets/task1/deepdive.png";
 export default {
-  setup() {},
+  setup() {
+    return {
+      deepdive,
+    };
+  },
 };
 </script>
 
 <template>
   <section>
-    <h1>This is strategy deep dive page page</h1>
+    <img :src="deepdive" alt="asda" />
   </section>
 </template>

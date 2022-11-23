@@ -22,17 +22,20 @@ const router = createRouter({
     {
       path: '/strategy',
       component: StrategyView,
+      props: true,
       children: [
         { path: 'need', component: StrategyNeedView },
-        { path: 'highlevel', component : StrategyHighlevelView },
+        { path: 'highlevel', component: StrategyHighlevelView },
         { path: 'deepdive/:step', component: StrategyDeepdiveView },
       ]
     },
     {
       path: '/worksmarter',
       component: WorkSmarterView,
+      props: true,
       children: [
-        { path: ':step', component : WorkSmarterDetailView }
+        { path: 'highlevel', component: WorkSmarterDetailView },
+        { path: 'deepdive/:step', component: WorkSmarterDetailView }
       ]
     },
     {

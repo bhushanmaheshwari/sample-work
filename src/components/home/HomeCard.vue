@@ -15,10 +15,10 @@ export default {
 </script>
 
 <template>
-  <div class="tile is-parent">
+  <div class="tile is-parent has-text-centered">
     <article class="tile is-child box">
-      <p class="title">{{ title }}</p>
-      <p class="subtitle">{{ subtitle }}</p>
+      <p class="title is-2">{{ title }}</p>
+      <p class="subtitle mt-3 is-4">{{ subtitle }}</p>
       <base-button :text="buttontext" :to="to"></base-button>
     </article>
   </div>

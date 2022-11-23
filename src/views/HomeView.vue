@@ -22,7 +22,7 @@ export default {
       title: task2.title,
       subtitle: task2.description,
       text: "Work Smarter",
-      to: "/worksmarter",
+      to: "/worksmarter/highlevel",
     });
 
     const about = {
@@ -41,27 +41,25 @@ export default {
 
 
 <template>
-  <section class="container">
+  <section class="mb-4 pb-4">
     <home-banner />
 
-    <section class="section">
-      <div class="tile is-ancestor">
-        <home-card
-          :title="strategize.title"
-          :subtitle="strategize.subtitle"
-          :buttontext="strategize.text"
-          :to="strategize.to"
-        />
-        <home-card
-          :title="worksmarter.title"
-          :subtitle="worksmarter.subtitle"
-          :buttontext="worksmarter.text"
-          :to="worksmarter.to"
-        />
-      </div>
-    </section>
+    <div class="tile is-ancestor">
+      <home-card
+        :title="strategize.title"
+        :subtitle="strategize.subtitle"
+        :buttontext="strategize.text"
+        :to="strategize.to"
+      />
+      <home-card
+        :title="worksmarter.title"
+        :subtitle="worksmarter.subtitle"
+        :buttontext="worksmarter.text"
+        :to="worksmarter.to"
+      />
+    </div>
 
-    <section class="hero is-large has-text-centered">
+    <section class="hero card is-large has-text-centered">
       <section class="">
         <div class="hero-body">
           <p class="title is-1">Behind the scenes</p>

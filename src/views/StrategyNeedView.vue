@@ -1,4 +1,5 @@
 <script>
+import need from "./../assets/task1/need.png";
 export default {
   setup() {
     const strategize = {
@@ -7,6 +8,7 @@ export default {
     };
     return {
       strategize,
+      need,
     };
   },
 };
@@ -14,6 +16,7 @@ export default {
 
 <template>
   <section>
+    <img :src="need" alt="asdfasd" />
     <div class="tile">
       <base-button :text="strategize.text" :to="strategize.to"></base-button>
       <br />
