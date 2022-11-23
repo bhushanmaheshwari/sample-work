@@ -1,23 +1,24 @@
 <script>
-import { RouterView } from "vue-router";
 import SiteHeader from "./components/layout/SiteHeader.vue";
+import SiteFooter from "./components/layout/SiteFooter.vue";
 
 export default {
-  components: { SiteHeader },
+  components: { SiteHeader, SiteFooter },
   setup() {},
 };
 </script>
 
 <template>
-  <section class="container is-fluid">
-    <site-header></site-header>
-    <section class="section">
+  <section class="">
+    <site-header />
+    <section class="">
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
         </transition>
       </router-view>
     </section>
+    <site-footer />
   </section>
 </template>
 
