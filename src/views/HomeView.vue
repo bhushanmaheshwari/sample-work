@@ -1,9 +1,10 @@
 <script>
-import BaseButton from "../components/ui/BaseButton.vue";
+import HomeBanner from "./../components/home/HomeBanner.vue";
+import HomeCard from "./../components/home/HomeCard.vue";
 import { ref } from "vue";
 import { useStore } from "vuex";
 export default {
-  components: { BaseButton },
+  components: { HomeBanner, HomeCard },
 
   setup() {
     const store = useStore();
@@ -25,9 +26,10 @@ export default {
     });
 
     const about = {
-      text: "If yes, click here!",
+      text: "Our Architecture",
       to: "/about",
     };
+
     return {
       strategize,
       worksmarter,
@@ -39,48 +41,37 @@ export default {
 
 
 <template>
-  <section>
-    <section class="hero is-large has-text-info is-white">
-      <div class="hero-body welcome-text">
-        <p class="title is-1">Hello, Good morning!</p>
-        <p class="subtitle is-2">Things we are going to dicuss today.</p>
-      </div>
-    </section>
+  <section class="container">
+    <home-banner />
 
     <section class="section">
       <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">{{ strategize.title }}</p>
-            <p class="subtitle">{{ strategize.subtitle }}</p>
-            <base-button
-              :text="strategize.text"
-              :to="strategize.to"
-            ></base-button>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">{{ worksmarter.title }}</p>
-            <p class="subtitle">{{ worksmarter.subtitle }}</p>
-            <base-button
-              :text="worksmarter.text"
-              :to="worksmarter.to"
-            ></base-button>
-          </article>
-        </div>
+        <home-card
+          :title="strategize.title"
+          :subtitle="strategize.subtitle"
+          :buttontext="strategize.text"
+          :to="strategize.to"
+        />
+        <home-card
+          :title="worksmarter.title"
+          :subtitle="worksmarter.subtitle"
+          :buttontext="worksmarter.text"
+          :to="worksmarter.to"
+        />
       </div>
     </section>
 
-    <section class="hero is-medium is-light">
-      <div class="hero-body">
-        <p class="title">How this website works?</p>
-        <p class="subtitle">
-          Are you interested in knowing how this website is working behind the
-          scenes?
-        </p>
-        <base-button :text="about.text" :to="about.to"></base-button>
-      </div>
+    <section class="hero is-large has-text-centered">
+      <section class="">
+        <div class="hero-body">
+          <p class="title is-1">Behind the scenes</p>
+          <p class="subtitle is-3">
+            Let's have a sneak peek on the overall architecture of the website,
+            and may be some inputs if you'd like to convey!
+          </p>
+          <base-button :text="about.text" :to="about.to"></base-button>
+        </div>
+      </section>
     </section>
   </section>
 </template>
