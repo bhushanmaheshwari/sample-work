@@ -16,11 +16,18 @@ export default {
       text: "Work Smarter Detail",
       to: "/worksmarter/1",
     };
+
     return {
       worksmarterDetail,
       worksmarterInfo,
-
     };
+  },
+  mounted() {
+    const bc = [
+      { text: "Home", route: "/", class: "" },
+      { text: "Work Smarter", route: "", class: "is-active" },
+    ];
+    this.$store.dispatch("tasks/setBc", bc);
   },
 };
 </script>

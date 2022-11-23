@@ -4,7 +4,11 @@ import SiteFooter from "./components/layout/SiteFooter.vue";
 
 export default {
   components: { SiteHeader, SiteFooter },
-  setup() {},
+  computed: {
+    bc() {
+      return this.$store.getters["tasks/getBc"];
+    },
+  },
 };
 </script>
 
@@ -12,6 +16,7 @@ export default {
   <section class="">
     <site-header />
     <section class="container local-container-height">
+      <base-bc :bc="bc" />
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>

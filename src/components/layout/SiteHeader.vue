@@ -26,7 +26,7 @@ export default {
     <router-link to="/">
       <img @click="animate" class="animation-box" :src="logo" style="max-height: 100px" />
     </router-link>
-    <h1 class="title is-4 is-uppercase">Sample Work</h1>
+    <h1 class="title is-4 is-uppercase has-text-grey-dark">Ask Nicely - Work Sample</h1>
   </section>
   <hr/>
 </template>

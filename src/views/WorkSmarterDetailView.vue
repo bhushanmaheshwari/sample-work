@@ -15,6 +15,14 @@ export default {
       highlevel,
     };
   },
+  mounted() {
+    const bc = [
+      { text: "Home", route: "/", class: "" },
+      { text: "Work Smarter", route: "/worksmarter/highlevel" },
+      { text: "Deep Dive", route: "", class: "is-active" },
+    ];
+    this.$store.dispatch("tasks/setBc", bc);
+  },
 };
 </script>
 

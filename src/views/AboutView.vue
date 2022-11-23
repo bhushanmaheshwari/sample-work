@@ -6,26 +6,27 @@ export default {
     const headerInfo = ref({
       title: "Architecture",
       subtitle:
-        "Faced with an existing system that uses a coupled templating engine like Smarty or Twig, how would you go about planning and executing a strategy for migrating the product to a headless frontend? Assume an existing PHP backend REST API is already available or can be extended to support it.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsum eveniet, fugit asperiores dolore amet eligendi earum. Dolore adipisci reprehenderit animi aut numquam eligendi fugit quod perspiciatis, corporis laboriosam dolorem!",
     });
 
+    return {
+      architecture,
+      headerInfo,
+    };
+  },
+  mounted() {
     const bc = ref([
       { text: "Home", route: "/", class: "" },
       { text: "About", route: "", class: "is-active" },
     ]);
 
-    return {
-      architecture,
-      headerInfo,
-      bc
-    };
+    this.$store.dispatch("tasks/setBc", bc);
   },
 };
 </script>
 
 <template>
   <section>
-    <base-bc :bc="bc" />
     <base-title
       :title="headerInfo.title"
       :subtitle="headerInfo.subtitle"

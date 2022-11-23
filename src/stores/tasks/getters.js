@@ -5,4 +5,7 @@ export default {
     task2(state) {
         return state.task2;
     },
+    getBc(state) {
+        return state.bc;
+    }
 };

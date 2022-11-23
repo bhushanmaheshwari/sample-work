@@ -16,12 +16,19 @@ export default {
       strategyInfo,
     };
   },
+  mounted() {
+    const bc = [
+      { text: "Home", route: "/", class: "" },
+      { text: "Strategize", route: "/strategy/need", class: "is-active" },
+    ];
+
+    this.$store.dispatch("tasks/setBc", bc);
+  },
 };
 </script>
 
 <template>
   <section>
-    <base-bc />
     <base-title
       :title="strategyInfo.title"
       :subtitle="strategyInfo.subtitle"

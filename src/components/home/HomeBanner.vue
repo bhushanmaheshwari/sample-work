@@ -14,8 +14,8 @@ export default {
     <div class="hero-body welcome-text">
       <div class="is-flex is-align-items-center is-justify-content-space-between">
         <div>
-          <p class="title is-1">Hello, Good morning!</p>
-          <p class="subtitle is-2">Things that we are going to <span class="is-underlined"> discuss</span> today.</p>
+          <p class="title is-1 has-text-grey-dark"><span class="has-text-link">Work Sample</span> means?</p>
+          <p class="mt-2 subtitle is-2 has-text-grey-dark">It is a finished product that assess whether the required role aligns with the <span class="">style</span>, <span class="">skills</span> and <span class="">values</span> of the candidate.</p>
         </div>
         <img class="hero-bg" :src="hero" alt="hero-background" />
       </div>
