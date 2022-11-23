@@ -27,7 +27,7 @@ export default {
                 title: 'Work Smarter',
                 description: 'How can we double the productivity of our engineers (without trading job satisfaction, system availability, quality, or security)?',
                 tags: ['double', 'productivity'],
-                homepageImage: 'task2/task2-homepage.png',
+                homepageImage: '/assets/home/hero-bg-home.jpeg',
                 needImage: 'task2/task2-need.png',
                 highlevelImage: 'task2/task2-highlevel.png',
                 steps: [

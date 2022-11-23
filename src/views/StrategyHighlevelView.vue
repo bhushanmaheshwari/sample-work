@@ -1,4 +1,5 @@
 <script>
+import highlevel from "./../assets/task1/highlevel.png";
 export default {
   setup() {
     const strategize = {
@@ -7,6 +8,7 @@ export default {
     };
     return {
       strategize,
+      highlevel
     };
   },
 };
@@ -14,7 +16,7 @@ export default {
 
 <template>
   <section>
-    <h1>This is strategy high level page</h1>
+    <img :src="highlevel" alt="asdf" />
     <base-button :text="strategize.text" :to="strategize.to"></base-button>
     <br />
   </section>

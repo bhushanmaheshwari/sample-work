@@ -1,5 +1,6 @@
 <script>
 import { ref } from "vue";
+import highlevel from "./../assets/task2/highlevel.png";
 
 export default {
   setup() {
@@ -11,6 +12,7 @@ export default {
 
     return {
       worksmarterInfo,
+      highlevel,
     };
   },
 };
@@ -18,9 +20,10 @@ export default {
 
 <template>
   <section class="section">
-    <base-title
-      :title="worksmarterInfo.title"
-      :subtitle="worksmarterInfo.subtitle"
-    ></base-title>
+    <img :src="highlevel" alt="asd" />
   </section>
 </template>
+
+
+<style scoped>
+</style>
