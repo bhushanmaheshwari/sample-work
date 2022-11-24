@@ -51,13 +51,17 @@ export default {
   },
   mounted() {
     this.$store.dispatch("tasks/setBc", []);
+    this.$store.dispatch("tasks/setHomePage", true);
+  },
+  unmounted() {
+    this.$store.dispatch("tasks/setHomePage", false);
   },
 };
 </script>
 
 
 <template>
-  <section class="mb-4 pb-4">
+  <section class="container mb-4 pb-4">
     <home-banner />
     <section class="hero has-text-grey is-medium has-text-centered">
       <section class="">

@@ -1,6 +1,5 @@
 <script>
 import { ref } from "vue";
-import highlevel from "./../assets/task2/highlevel.png";
 
 export default {
   setup() {
@@ -11,18 +10,14 @@ export default {
     });
 
     return {
-      worksmarterInfo,
-      highlevel,
+      worksmarterInfo
     };
   },
   mounted() {
     const bc = [
       { text: "Home", route: "/", class: "" },
-      {
-        text: "Work Smarter",
-        route: "/worksmarter/highlevel",
-        class: "is-active",
-      },
+      { text: "Work Smarter", route: "/worksmarter/highlevel" },
+      { text: "Deep Dive", route: "", class: "is-active" },
     ];
     this.$store.dispatch("tasks/setBc", bc);
   },
@@ -31,8 +26,7 @@ export default {
 
 <template>
   <section class="section">
-    <img :src="highlevel" alt="asd" />
-    <!-- <base-page-footer :text="'strategize.text'" :to="'/worksmarter/deepdive'" /> -->
+    <h1> yet to come</h1>
   </section>
 </template>
 

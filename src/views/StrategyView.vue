@@ -1,39 +1,8 @@
 <script>
-import { ref } from "vue";
-import { useStore } from "vuex";
-export default {
-  setup() {
-    const store = useStore();
-
-    const { title, description } = store.getters["tasks/task1"];
-
-    const strategyInfo = ref({
-      title,
-      subtitle: description,
-    });
-
-    return {
-      strategyInfo,
-    };
-  },
-  mounted() {
-    const bc = [
-      { text: "Home", route: "/", class: "" },
-      { text: "Strategize", route: "/strategy/need", class: "is-active" },
-    ];
-
-    this.$store.dispatch("tasks/setBc", bc);
-  },
-};
 </script>
 
 <template>
   <section>
-    <base-title
-      :title="strategyInfo.title"
-      :subtitle="strategyInfo.subtitle"
-    ></base-title>
-
     <router-view v-slot="slotProps">
       <transition name="route" mode="out-in">
         <component :is="slotProps.Component"></component>

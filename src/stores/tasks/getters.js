@@ -7,5 +7,8 @@ export default {
     },
     getBc(state) {
         return state.bc;
+    },
+    isHomePage(state) {
+        return state.isHomePage; 
     }
 };
