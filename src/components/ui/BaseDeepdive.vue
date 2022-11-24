@@ -14,10 +14,10 @@ export default {
 </script>
 
 <template>
-  <section class="section">
-    <section class="local-page-section">
-      <h1 class="title is-3 has-text-grey">{{ title }}</h1>
-      <p class="pt-3 is-size-4 has-text-dark-grey">
+  <section>
+    <section class="section card local-page-section">
+      <h1 class="title is-3 has-text-grey is-capitalized">{{ title }}</h1>
+      <p v-if="subtitle" class="is-size-4 has-text-dark-grey">
         {{ subtitle }}
       </p>
       <img
@@ -55,19 +55,19 @@ export default {
 <style scoped>
 .local-page-section {
   width: 97%;
-  margin-top: 1rem;
+  margin: 3rem auto;
 }
 .local-page-image {
   margin: 4rem 0;
 }
 @media screen and (min-width: 1400px) and (max-width: 1920px) {
   .local-page-section {
-    width: 80%;
+    width: 85%;
   }
 }
 @media screen and (min-width: 1920px) {
   .local-page-section {
-    width: 70%;
+    width: 80%;
   }
 }
 </style>

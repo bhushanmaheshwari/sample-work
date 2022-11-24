@@ -32,8 +32,8 @@ export default {
 <template>
   <section>
     <base-deepdive
-      :title="'Core Building blocks'"
-      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :title="'Missing Pieces of Productivity'"
+      :subtitle="`We have often think about improving productivity, and whether it could be personal productivity or organization's, it has potential to exponentially improve well-being, sense of purpose, sustainability and engagement.`"
       :image="highlevel"
       :next-title="''"
       :next-subtitle="''"

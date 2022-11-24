@@ -5,13 +5,18 @@ export default {
   setup() {
     const headerInfo = ref({
       title: "Architecture",
-      subtitle:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsum eveniet, fugit asperiores dolore amet eligendi earum. Dolore adipisci reprehenderit animi aut numquam eligendi fugit quod perspiciatis, corporis laboriosam dolorem!",
+      subtitle: `Let's have a sneak peek on the high-level <span class="tag is-size-5 has-background-link-light has-text-weight-semibold">architecture</span> of the website, and would really appreciate your <span class="tag is-size-5 has-background-link-light has-text-weight-semibold">feedback</span> and queries!`,
+    });
+
+    const architectureInfo = ref({
+      title : 'Core Building blocks',
+      subtitle : 'This website is hosted on Azure Static Web, empowered by Vue.js, Bulma Css on front end; node.js and expressjs as middle tier; and MongoDB as data store + data api + cognitive search for future scalabilty options.'
     });
 
     return {
       architecture,
       headerInfo,
+      architectureInfo
     };
   },
   mounted() {
@@ -31,9 +36,9 @@ export default {
       :title="headerInfo.title"
       :subtitle="headerInfo.subtitle"
     ></base-title>
-     <base-deepdive
-      :title="'Core Building blocks'"
-      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+    <base-deepdive
+      :title="architectureInfo.title"
+      :subtitle="architectureInfo.subtitle"
       :image="architecture"
       :next-title="''"
       :next-subtitle="''"

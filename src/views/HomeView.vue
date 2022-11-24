@@ -19,7 +19,7 @@ export default {
     const strategy = ref({
       title: task1.title,
       subtitle: task1.description,
-      text: "How our migration strategy should be?",
+      text: "How well our migration strategy is aligned?",
       to: "/strategy/need",
       color: "has-text-link",
       image: strategyImage,
@@ -28,7 +28,7 @@ export default {
     const worksmarter = ref({
       title: task2.title,
       subtitle: task2.description,
-      text: "What can help us be more productive?",
+      text: "What can help us to be more productive?",
       to: "/worksmarter/highlevel",
       color: "has-text-link",
       image: worksmarterImage,
@@ -36,8 +36,8 @@ export default {
 
     const about = ref({
       title: "Architecture",
-      subtitle: `Let's have a sneak peek on the overall <span class="tag is-size-6 is-primary">architecture</span> of the website, and may be some inputs if you'd like to convey!   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, uibusdam quia beatae quis rem numquam repellat neque maxime! Repellendus excepturi odio quaerat sequi! Dolorem illo quasi placeat modi, accusantium officia!`,
-      text: "Know more about this website behind the scenes",
+      subtitle: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, uibusdam quia beatae quis rem numquam repellat neque maxime! Repellendus excepturi odio quaerat sequi! Dolorem illo quasi placeat modi, accusantium officia!`,
+      text: "Do you want to know more about this website?",
       to: "/about",
       color: "has-text-link",
       image: aboutImage,

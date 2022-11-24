@@ -18,6 +18,6 @@ export default {
 
 <style scoped>
 .local-title-desc {
-  max-width: 80%;
+  /* max-width: 80%; */
 }
 </style>
