@@ -14,14 +14,14 @@ export default {
 </script>
 
 <template>
-  <section class="section">
-    <section class="local-page-section">
-      <h1 class="title is-3 has-text-grey">{{ title }}</h1>
-      <p class="pt-3 is-size-4 has-text-dark-grey">
+  <section>
+    <section class="section card local-page-section">
+      <h1 class="title is-3 has-text-grey is-capitalized">{{ title }}</h1>
+      <p v-if="subtitle" class="is-size-4 has-text-dark-grey">
         {{ subtitle }}
       </p>
       <img
-        class="local-need-image"
+        class="local-page-image"
         :src="image"
         alt="What is the need for migration here?"
       />
@@ -54,10 +54,20 @@ export default {
 
 <style scoped>
 .local-page-section {
-  margin-top: 1rem;
-}
-.local-need-image {
   width: 97%;
-  margin : 4rem 0;
+  margin: 3rem auto;
+}
+.local-page-image {
+  margin: 4rem 0;
+}
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
+  .local-page-section {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .local-page-section {
+    width: 80%;
+  }
 }
 </style>

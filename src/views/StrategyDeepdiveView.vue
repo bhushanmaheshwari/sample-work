@@ -10,9 +10,9 @@ export default {
     const bc = [
       { text: "Home", route: "/", class: "" },
       { text: "Strategy", route: "/strategy/need" },
-      { text: "High-level planning", route: "/strategy/highlevel" },
+      { text: "Migration Journey", route: "/strategy/highlevel" },
       {
-        text: "Detailed Analysis",
+        text: "Building Blocks",
         route: "/strategy/highlevel",
         class: "is-active",
       },
@@ -26,8 +26,8 @@ export default {
 <template>
   <section>
      <base-deepdive
-      :title="'Core Building blocks'"
-      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :title="'Building blocks - Underlying Strategy'"
+      :subtitle="'Strategizing a department level migration involves contribution from all stakeholders including leadership, product team, and engineering team. Many decisions are part of this process, like appropriate technology, change management, impact on revenue, etc.'"
       :image="deepdive"
       :next-title="''"
       :next-subtitle="''"

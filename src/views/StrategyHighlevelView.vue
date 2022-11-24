@@ -16,7 +16,7 @@ export default {
       { text: "Home", route: "/", class: "" },
       { text: "Strategy", route: "/strategy/need" },
       {
-        text: "High-level planning",
+        text: "Migration Journey",
         route: "/strategy/highlevel",
         class: "is-active",
       },
@@ -28,14 +28,14 @@ export default {
 
 <template>
   <section>
-      <base-deepdive
+    <base-deepdive
       :title="'Migration Journey - decoupled to headless'"
-      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :subtitle="'Moving from monolithic/decoupled to headless would reduce technical operational risk and should also enhance flexibility, performance, customization, omnichannel experience and future strategic growth'"
       :image="highlevel"
       :next-title="'Building blocks'"
-      :next-subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :next-subtitle="'There are numerous action items to consider, and from my experience, I would like to classify and discuss three main categories - Foundational Elements, Continuous Development and Integration, and Long-term Vision and Planning.'"
       :next-to="strategy.to"
-      :next-button-text="'Towards implementation details'"
+      :next-button-text="''"
     />
   </section>
 </template>

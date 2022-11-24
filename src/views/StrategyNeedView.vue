@@ -41,13 +41,13 @@ export default {
       :subtitle="strategyInfo.subtitle"
     ></base-title>
     <base-deepdive
-      :title="'What is the need for migration here?'"
-      :subtitle="''"
+      :title="'Understanding Problem '"
+      :subtitle="'As a first step, we would evaluate the need of the migration, underlying implications and if we are really ready to proceed.'"
       :image="need"
       :next-title="'Migration journey'"
-      :next-subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :next-subtitle="`Either way, rest assured, these dependencies will increase with time, if we want to scale up or add new features, making this monolithic and 'decoupled' architecture more complex`"
       :next-to="strategy.to"
-      :next-button-text="'Decoupled to Headless'"
+      :next-button-text="''"
     />
   </section>
 </template>
