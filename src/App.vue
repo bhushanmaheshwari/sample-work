@@ -62,6 +62,11 @@ export default {
 
 .local-container-height {
   min-height: 1000px;
-  margin: 0 5rem;
+  margin: 0 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .local-container-height {
+    margin: 0 5rem;
+  }
 }
 </style>
