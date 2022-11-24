@@ -7,6 +7,8 @@
           >Bhushan Maheshwari</a
         >.
       </p>
+      <p>Software Architect | MBA | JavaScript/Python/Azure Developer </p>
+      <p>Washington DC, USA</p>
     </div>
   </footer>
 </template>
