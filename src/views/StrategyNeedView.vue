@@ -13,12 +13,12 @@ export default {
       subtitle: description,
     });
 
-    const strategize = {
-      text: "Strategize High level",
+    const strategy = {
+      text: "Strategy High level",
       to: "/strategy/highlevel",
     };
     return {
-      strategize,
+      strategy,
       need,
       strategyInfo,
     };
@@ -26,7 +26,7 @@ export default {
   mounted() {
     const bc = [
       { text: "Home", route: "/", class: "" },
-      { text: "Strategize", route: "/strategy/need", class: "is-active" },
+      { text: "Strategy", route: "/strategy/need", class: "is-active" },
     ];
 
     this.$store.dispatch("tasks/setBc", bc);
@@ -43,7 +43,13 @@ export default {
     <h1 class="title is-3 has-text-grey">
       What is the need for migration here?
     </h1>
-    <img :src="need" alt="asdfasd" />
-    <base-page-footer :text="strategize.text" :to="strategize.to" />
+    <img class="local-need-image" :src="need" alt="What is the need for migration here?" />
+    <base-page-footer :text="strategy.text" :to="strategy.to" />
   </section>
 </template>
+
+<style scoped>
+.local-need-image {
+  width: 97%;
+}
+</style>

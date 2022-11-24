@@ -25,7 +25,7 @@ export default {
           itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa,
           saepe repellendus?
         </p>
-        <router-link class="button is-large is-link" :to="to">{{
+        <router-link class="button is-large is-link-dark" :to="to">{{
           text
         }}</router-link>
       </div>

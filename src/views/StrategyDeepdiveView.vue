@@ -9,7 +9,7 @@ export default {
   mounted() {
     const bc = [
       { text: "Home", route: "/", class: "" },
-      { text: "Strategize", route: "/strategy/need" },
+      { text: "Strategy", route: "/strategy/need" },
       { text: "High-level planning", route: "/strategy/highlevel" },
       {
         text: "Detailed Analysis",

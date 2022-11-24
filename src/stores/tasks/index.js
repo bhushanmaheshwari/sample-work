@@ -9,13 +9,13 @@ export default {
     mutations,
     state() {
         return {
-            isHomePage : true,
+            isHomePage : false,
             bc: [
                 { text: "Home", route: "/", class: "" },
                 { text: "Work Smarter", route: "", class: "is-active" },
             ],
             task1: {
-                title: 'Strategize',
+                title: 'Strategy',
                 description: 'Faced with an existing system that uses a coupled templating engine like <span class="tag is-size-5 has-background-link-light has-text-weight-semibold">Smarty</span> or <span class="tag is-size-5 has-background-link-light has-text-weight-semibold">Twig</span> how would you go about planning and executing a strategy for <span class="tag is-size-5 has-background-link-light has-text-weight-semibold">migrating</span> the product to a <span class="tag is-size-5 has-background-link-light has-text-weight-semibold">headless</span> frontend? Assume an existing PHP backend REST API is already available or can be extended to support it.',
                 tags: ['Smarty', 'Twig', 'migrating', 'headless frontend'],
                 homepageImage: 'task1/task1-homepage.png',

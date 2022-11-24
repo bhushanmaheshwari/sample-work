@@ -16,7 +16,7 @@ export default {
     const task1 = store.getters["tasks/task1"];
     const task2 = store.getters["tasks/task2"];
 
-    const strategize = ref({
+    const strategy = ref({
       title: task1.title,
       subtitle: task1.description,
       text: "How our migration strategy should be?",
@@ -44,7 +44,7 @@ export default {
     });
 
     return {
-      strategize,
+      strategy,
       worksmarter,
       about,
     };
@@ -77,12 +77,12 @@ export default {
         <div class="mb-4 columns">
           <home-card
             class="column"
-            :title="strategize.title"
-            :subtitle="strategize.subtitle"
-            :buttontext="strategize.text"
-            :to="strategize.to"
-            :color="strategize.color"
-            :image="strategize.image"
+            :title="strategy.title"
+            :subtitle="strategy.subtitle"
+            :buttontext="strategy.text"
+            :to="strategy.to"
+            :color="strategy.color"
+            :image="strategy.image"
           />
           <home-card
             class="column"

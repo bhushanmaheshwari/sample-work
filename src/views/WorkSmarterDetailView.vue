@@ -32,7 +32,7 @@ export default {
 <template>
   <section class="section">
     <img :src="highlevel" alt="asd" />
-    <!-- <base-page-footer :text="'strategize.text'" :to="'/worksmarter/deepdive'" /> -->
+    <!-- <base-page-footer :text="'strategy.text'" :to="'/worksmarter/deepdive'" /> -->
   </section>
 </template>
 

@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <section class="hero is-medium has-text-info is-white">
+  <section class="hero is-medium has-text-link is-white">
     <div class="hero-body welcome-text">
       <div class="is-flex is-align-items-center is-justify-content-space-between">
         <div>
