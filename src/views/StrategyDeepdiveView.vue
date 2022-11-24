@@ -25,7 +25,14 @@ export default {
 
 <template>
   <section>
-    <h1 class="title is-3 has-text-grey">Detailed Implementation Strategy</h1>
-    <img :src="deepdive" alt="asda" />
+     <base-deepdive
+      :title="'Core Building blocks'"
+      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :image="deepdive"
+      :next-title="''"
+      :next-subtitle="''"
+      :next-to="''"
+      :next-button-text="''"
+    />
   </section>
 </template>

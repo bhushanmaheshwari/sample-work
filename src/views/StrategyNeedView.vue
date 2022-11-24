@@ -40,16 +40,14 @@ export default {
       :title="strategyInfo.title"
       :subtitle="strategyInfo.subtitle"
     ></base-title>
-    <h1 class="title is-3 has-text-grey">
-      What is the need for migration here?
-    </h1>
-    <img class="local-need-image" :src="need" alt="What is the need for migration here?" />
-    <base-page-footer :text="strategy.text" :to="strategy.to" />
+    <base-deepdive
+      :title="'What is the need for migration here?'"
+      :subtitle="''"
+      :image="need"
+      :next-title="'Migration journey'"
+      :next-subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :next-to="strategy.to"
+      :next-button-text="'Decoupled to Headless'"
+    />
   </section>
 </template>
-
-<style scoped>
-.local-need-image {
-  width: 97%;
-}
-</style>

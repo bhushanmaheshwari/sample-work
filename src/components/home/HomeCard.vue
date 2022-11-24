@@ -28,6 +28,6 @@ export default {
 
 <style scoped>
 .local-card {
-  width: 300px;
+  width: 200px;
 }
 </style>

@@ -39,14 +39,10 @@ export default {
       :subtitle="worksmarterInfo.subtitle"
     ></base-title>
 
-    <div class="columns">
-      <div class="column">
-        <router-view v-slot="slotProps">
-          <transition name="route" mode="out-in">
-            <component :is="slotProps.Component"></component>
-          </transition>
-        </router-view>
-      </div>
-    </div>
+    <router-view v-slot="slotProps">
+      <transition name="route" mode="out-in">
+        <component :is="slotProps.Component"></component>
+      </transition>
+    </router-view>
   </section>
 </template>

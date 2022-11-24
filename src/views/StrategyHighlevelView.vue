@@ -21,7 +21,6 @@ export default {
         class: "is-active",
       },
     ];
-
     this.$store.dispatch("tasks/setBc", bc);
   },
 };
@@ -29,10 +28,14 @@ export default {
 
 <template>
   <section>
-    <h1 class="title is-3 has-text-grey">
-      Let's understand High-level Strategy
-    </h1>
-    <img :src="highlevel" alt="asdf" />
-    <base-page-footer :text="strategy.text" :to="strategy.to" />
+      <base-deepdive
+      :title="'Migration Journey - decoupled to headless'"
+      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :image="highlevel"
+      :next-title="'Building blocks'"
+      :next-subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :next-to="strategy.to"
+      :next-button-text="'Towards implementation details'"
+    />
   </section>
 </template>

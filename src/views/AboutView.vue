@@ -31,6 +31,14 @@ export default {
       :title="headerInfo.title"
       :subtitle="headerInfo.subtitle"
     ></base-title>
-    <img :src="architecture" />
+     <base-deepdive
+      :title="'Core Building blocks'"
+      :subtitle="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odi explicabo culpa dignissimos. Soluta at ipsam id temporibus corrupti itaque, enim beatae asperiores sit veniam dignissimos, tempora culpa, saepe repellendus?'"
+      :image="architecture"
+      :next-title="''"
+      :next-subtitle="''"
+      :next-to="''"
+      :next-button-text="''"
+    />
   </section>
 </template>
