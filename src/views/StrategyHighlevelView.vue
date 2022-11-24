@@ -2,19 +2,19 @@
 import highlevel from "./../assets/task1/highlevel.png";
 export default {
   setup() {
-    const strategize = {
-      text: "Strategize Deep dive 1",
+    const strategy = {
+      text: "strategy Deep dive 1",
       to: "/strategy/deepdive",
     };
     return {
-      strategize,
+      strategy,
       highlevel,
     };
   },
   mounted() {
     const bc = [
       { text: "Home", route: "/", class: "" },
-      { text: "Strategize", route: "/strategy/need" },
+      { text: "Strategy", route: "/strategy/need" },
       {
         text: "High-level planning",
         route: "/strategy/highlevel",
@@ -33,6 +33,6 @@ export default {
       Let's understand High-level Strategy
     </h1>
     <img :src="highlevel" alt="asdf" />
-    <base-page-footer :text="strategize.text" :to="strategize.to" />
+    <base-page-footer :text="strategy.text" :to="strategy.to" />
   </section>
 </template>

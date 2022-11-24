@@ -19,7 +19,7 @@ export default {
     return {
       logo,
       developer,
-      animate,
+      animate
     };
   },
   mounted() {
