@@ -37,7 +37,7 @@ export default {
     const about = ref({
       title: "Architecture",
       subtitle: `Let's have a sneak peek on the overall <span class="tag is-size-6 is-primary">architecture</span> of the website, and may be some inputs if you'd like to convey!   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, uibusdam quia beatae quis rem numquam repellat neque maxime! Repellendus excepturi odio quaerat sequi! Dolorem illo quasi placeat modi, accusantium officia!`,
-      text: "Know more behind the scenes",
+      text: "Know more about this website behind the scenes",
       to: "/about",
       color: "has-text-link",
       image: aboutImage,
@@ -93,18 +93,17 @@ export default {
             :color="worksmarter.color"
             :image="worksmarter.image"
           />
+          <home-card
+            class="column"
+            :title="about.title"
+            :subtitle="about.subtitle"
+            :buttontext="about.text"
+            :to="about.to"
+            :color="about.color"
+            :image="about.image"
+          />
         </div>
       </section>
     </section>
-    <div class="mb-4">
-      <home-card
-        :title="about.title"
-        :subtitle="about.subtitle"
-        :buttontext="about.text"
-        :to="about.to"
-        :color="about.color"
-        :image="about.image"
-      />
-    </div>
   </section>
 </template>
