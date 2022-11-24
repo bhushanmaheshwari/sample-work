@@ -21,7 +21,7 @@ export default {
         {{ subtitle }}
       </p>
       <img
-        class="local-need-image"
+        class="local-page-image"
         :src="image"
         alt="What is the need for migration here?"
       />
@@ -54,10 +54,20 @@ export default {
 
 <style scoped>
 .local-page-section {
+  width: 97%;
   margin-top: 1rem;
 }
-.local-need-image {
-  width: 97%;
-  margin : 4rem 0;
+.local-page-image {
+  margin: 4rem 0;
+}
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
+  .local-page-section {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .local-page-section {
+    width: 70%;
+  }
 }
 </style>
