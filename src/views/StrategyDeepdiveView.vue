@@ -25,6 +25,7 @@ export default {
 
 <template>
   <section>
+    <h1 class="title is-3 has-text-grey">Detailed Implementation Strategy</h1>
     <img :src="deepdive" alt="asda" />
   </section>
 </template>

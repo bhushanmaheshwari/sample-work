@@ -8,14 +8,22 @@ export default {
     bc() {
       return this.$store.getters["tasks/getBc"];
     },
+    isHomePage() {
+      return this.$store.getters["tasks/isHomePage"];
+    },
+  },
+  watch: {
+    $route(to, from) {
+      window.scroll(0, 0);
+    },
   },
 };
 </script>
 
 <template>
   <section class="">
-    <site-header />
-    <section class="container local-container-height">
+    <site-header :largeMode="isHomePage" />
+    <section class="local-container-height">
       <base-bc :bc="bc" />
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
@@ -54,5 +62,6 @@ export default {
 
 .local-container-height {
   min-height: 1000px;
+  margin: 0 5rem;
 }
 </style>

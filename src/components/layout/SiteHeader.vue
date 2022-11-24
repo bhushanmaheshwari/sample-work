@@ -4,10 +4,17 @@ import { gsap } from "gsap";
 import logo from "./../../assets/logo.png";
 
 export default {
+  props: {
+    largeMode: {
+      default: false,
+      type: Boolean,
+      required: false,
+    },
+  },
   setup() {
     const developer = ref("Bhushan Maheshwari");
     const animate = () => {
-      gsap.to(".animation-box", { rotation: 360, duration: 5, repeat:  5});
+      gsap.to(".animation-box", { rotation: 360, duration: 5, repeat: 5 });
     };
     return {
       logo,
@@ -22,11 +29,47 @@ export default {
 </script>
 
 <template>
-  <section class="hero is-medium has-text-centered pt-4 mt-4">
+  <section v-if="largeMode" class="hero is-medium has-text-centered pt-4 mt-4">
     <router-link to="/">
-      <img @click="animate" class="animation-box" :src="logo" style="max-height: 100px" />
+      <img
+        @click="animate"
+        class="animation-box"
+        :src="logo"
+        style="max-height: 110px"
+      />
     </router-link>
-    <h1 class="title is-4 is-uppercase has-text-grey-dark">Ask Nicely - Work Sample</h1>
+    <div>
+      <p class="is-size-2 has-text-weight-bold is-uppercase has-text-grey-dark">
+        Ask Nicely
+      </p>
+      <p class="is-size-4 has-text-weight-semibold is-uppercase has-text-grey">
+        Work Sample
+      </p>
+    </div>
   </section>
-  <hr/>
+  <section v-else class="pt-4 mt-4 ml-3">
+    <div class="is-flex is-align-items-center">
+      <router-link to="/">
+        <img
+          @click="animate"
+          class="animation-box"
+          :src="logo"
+          style="max-height: 80px"
+        />
+      </router-link>
+      <div class="ml-4">
+        <p
+          class="is-size-3 has-text-weight-bold is-uppercase has-text-grey-dark"
+        >
+          Ask Nicely
+        </p>
+        <p
+          class="is-size-6 has-text-weight-semibold is-uppercase has-text-grey"
+        >
+          Work Sample
+        </p>
+      </div>
+    </div>
+  </section>
+  <hr />
 </template>

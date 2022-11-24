@@ -6,6 +6,8 @@ import StrategyHighlevelView from './../views/StrategyHighlevelView.vue';
 import StrategyNeedView from './../views/StrategyNeedView.vue';
 import WorkSmarterView from './../views/WorkSmarterView.vue';
 import WorkSmarterDetailView from './../views/WorkSmarterDetailView.vue';
+import WorkSmarterDeepdiveView from './../views/WorkSmarterDeepdiveView.vue';
+
 
 
 const router = createRouter({
@@ -26,7 +28,7 @@ const router = createRouter({
       children: [
         { path: 'need', component: StrategyNeedView },
         { path: 'highlevel', component: StrategyHighlevelView },
-        { path: 'deepdive/:step', component: StrategyDeepdiveView },
+        { path: 'deepdive', component: StrategyDeepdiveView },
       ]
     },
     {
@@ -35,7 +37,7 @@ const router = createRouter({
       props: true,
       children: [
         { path: 'highlevel', component: WorkSmarterDetailView },
-        { path: 'deepdive/:step', component: WorkSmarterDetailView }
+        { path: 'deepdive', component: WorkSmarterDeepdiveView }
       ]
     },
     {
