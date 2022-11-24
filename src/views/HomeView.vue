@@ -36,7 +36,7 @@ export default {
 
     const about = ref({
       title: "Architecture",
-      subtitle: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, uibusdam quia beatae quis rem numquam repellat neque maxime! Repellendus excepturi odio quaerat sequi! Dolorem illo quasi placeat modi, accusantium officia!`,
+      subtitle: ``,
       text: "Do you want to know more about this website?",
       to: "/about",
       color: "has-text-link",
@@ -68,10 +68,7 @@ export default {
         <div class="hero-body">
           <p class="title is-1 has-text-grey-dark">Work Demo</p>
           <p class="mt-2 subtitle is-3 has-text-grey">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Architecto, quibusdam quia beatae quis rem numquam repellat neque
-            maxime! Repellendus excepturi odio quaerat sequi! Dolorem illo quasi
-            placeat modi, accusantium officia!
+           We will be discussing on two work items - firstly, strategizing the migration from templating engine to modern JavaScript framework, and, secondly, how can we improve productivity of the engineering department. Additionally, if time permits, would like to briefly talk about the architecture of this demo website.
           </p>
         </div>
         <div class="mb-4 columns">
