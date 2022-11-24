@@ -66,7 +66,7 @@ export default {
     <section class="hero has-text-grey is-medium has-text-centered">
       <section class="">
         <div class="hero-body">
-          <p class="title is-1 has-text-grey-dark">Demonstration</p>
+          <p class="title is-1 has-text-grey-dark">Work Demo</p>
           <p class="mt-2 subtitle is-3 has-text-grey">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Architecto, quibusdam quia beatae quis rem numquam repellat neque

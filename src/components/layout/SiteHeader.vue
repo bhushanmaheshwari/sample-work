@@ -16,13 +16,21 @@ export default {
     const animate = () => {
       gsap.to(".animation-box", { rotation: 360, duration: 5, repeat: 5 });
     };
+    const downloadFile =
+      "/Work Sample - Final Version - Bhushan Maheshwari.pdf";
+
     return {
       logo,
       developer,
-      animate
+      animate,
+      downloadFile,
     };
   },
-  mounted() {
+  updated() {
+    this.animate();
+  },
+
+  beforeMount() {
     this.animate();
   },
 };
@@ -44,6 +52,11 @@ export default {
       </p>
       <p class="is-size-4 has-text-weight-semibold is-uppercase has-text-grey">
         Work Sample
+        <a class="ml-1 is-size-5" :href="downloadFile" target="_blank"
+          ><span class="icon">
+            <i class="fa fa-download"></i>
+          </span>
+        </a>
       </p>
     </div>
   </section>

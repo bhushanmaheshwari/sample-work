@@ -12,12 +12,21 @@ export default {
 <template>
   <section class="hero is-medium has-text-link is-white">
     <div class="hero-body welcome-text">
-      <div class="is-flex is-align-items-center is-justify-content-space-between">
-        <div>
-          <p class="title is-1 has-text-grey-dark"><span class="has-text-link">Work Sample</span> means?</p>
-          <p class="mt-2 subtitle is-2 has-text-grey-dark">It is a finished product that assess whether the required role aligns with the <span class="">style</span>, <span class="">skills</span> and <span class="">values</span> of the candidate.</p>
+      <div class="columns is-vcentered">
+        <div class="column is-three-fifths">
+          <p class="title is-1 has-text-grey-dark">
+            <span class="has-text-link">Work Sample</span> means?
+          </p>
+          <p class="mt-2 subtitle is-2 has-text-grey-dark">
+            It is a finished product that assess whether the required role
+            aligns with the <span class="">style</span>,
+            <span class="">skills</span> and <span class="">values</span> of the
+            candidate.
+          </p>
         </div>
-        <img class="hero-bg" :src="hero" alt="hero-background" />
+        <div class="column">
+          <img class="hero-bg" :src="hero" alt="hero-background" />
+        </div>
       </div>
     </div>
   </section>
@@ -25,6 +34,6 @@ export default {
 
 <style scoped>
 .hero-bg {
-  width: 40%;
+  /* width: 80%; */
 }
 </style>
