@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="mb-6 pb-6">
+  <div class="">
     <div class="content is-large">
       <h1 class="title is-1 has-text-link-dark">{{ title }}</h1>
       <p class="subtitle is-4 my-2 local-title-desc" :innerHTML="subtitle"></p>
