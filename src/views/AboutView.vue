@@ -10,7 +10,7 @@ export default {
 
     const architectureInfo = ref({
       title : 'Core Building blocks',
-      subtitle : 'This website is hosted on Azure Static Web, empowered by Vue.js, Bulma Css on front end; node.js and expressjs as middle tier; and MongoDB as data store + data api + cognitive search for future scalabilty options.'
+      subtitle : 'This website is hosted on Azure Static Web, empowered by Vue.js, Bulma CSS on front-end; node.js and expressjs as middle tier; and MongoDB as data store + data api + cognitive search for future scalability options.'
     });
 
     return {
@@ -22,7 +22,7 @@ export default {
   mounted() {
     const bc = ref([
       { text: "Home", route: "/", class: "" },
-      { text: "About", route: "", class: "is-active" },
+      { text: "Architecture", route: "", class: "is-active" },
     ]);
 
     this.$store.dispatch("tasks/setBc", bc);

@@ -33,7 +33,7 @@ export default {
   <section>
     <base-deepdive
       :title="'Missing Pieces of Productivity'"
-      :subtitle="`We have often think about improving productivity, and whether it could be personal productivity or organization's, it has potential to exponentially improve well-being, sense of purpose, sustainability and engagement.`"
+      :subtitle="`We often think about improving productivity, and whether it could be personal productivity or an organization's, it has the potential to exponentially improve well-being, sense of purpose, sustainability, and engagement.`"
       :image="highlevel"
       :next-title="''"
       :next-subtitle="''"

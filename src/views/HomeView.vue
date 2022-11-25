@@ -68,7 +68,11 @@ export default {
         <div class="hero-body">
           <p class="title is-1 has-text-grey-dark">Work Demo</p>
           <p class="mt-2 subtitle is-3 has-text-grey">
-           We will be discussing on two work items - firstly, strategizing the migration from templating engine to modern JavaScript framework, and, secondly, how can we improve productivity of the engineering department. Additionally, if time permits, would like to briefly talk about the architecture of this demo website.
+            We will be discussing two work items - firstly, strategizing the
+            migration from templating engine to a modern JavaScript framework,
+            and, secondly, how can we improve the productivity of the
+            engineering department. Additionally, if time permits, would like to
+            briefly talk about the architecture of this demo website.
           </p>
         </div>
         <div class="mb-4 columns">

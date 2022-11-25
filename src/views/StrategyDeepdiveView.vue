@@ -25,9 +25,9 @@ export default {
 
 <template>
   <section>
-     <base-deepdive
+    <base-deepdive
       :title="'Building blocks - Underlying Strategy'"
-      :subtitle="'Strategizing a department level migration involves contribution from all stakeholders including leadership, product team, and engineering team. Many decisions are part of this process, like appropriate technology, change management, impact on revenue, etc.'"
+      :subtitle="'Strategizing a department-level migration involves contributions from all stakeholders including leadership, the product team, and the engineering team. Many decisions are part of this process, like appropriate technology, change management, impact on revenue, etc.'"
       :image="deepdive"
       :next-title="''"
       :next-subtitle="''"

@@ -42,7 +42,7 @@ export default {
     ></base-title>
     <base-deepdive
       :title="'Understanding Problem '"
-      :subtitle="'As a first step, we would evaluate the need of the migration, underlying implications and if we are really ready to proceed.'"
+      :subtitle="'As a first step, we would evaluate the need for the migration, its underlying implications, and if we are really ready to proceed.'"
       :image="need"
       :next-title="'Migration journey'"
       :next-subtitle="`Either way, rest assured, these dependencies will increase with time, if we want to scale up or add new features, making this monolithic and 'decoupled' architecture more complex`"

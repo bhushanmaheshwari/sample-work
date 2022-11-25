@@ -30,7 +30,7 @@ export default {
   <section>
     <base-deepdive
       :title="'Migration Journey - decoupled to headless'"
-      :subtitle="'Moving from monolithic/decoupled to headless would reduce technical operational risk and should also enhance flexibility, performance, customization, omnichannel experience and future strategic growth'"
+      :subtitle="'Moving from monolithic/decoupled to headless would reduce technical operational risk and should also enhance flexibility, performance, customization, omnichannel experience, and future strategic growth.'"
       :image="highlevel"
       :next-title="'Building blocks'"
       :next-subtitle="'There are numerous action items to consider, and from my experience, I would like to classify and discuss three main categories - Foundational Elements, Continuous Development and Integration, and Long-term Vision and Planning.'"
