@@ -8,7 +8,6 @@ export default {
         fetch('https://api-sample-work.azurewebsites.net/api/tasks', {
             method: 'GET'
         }).then((data) => {
-            console.log(data);
         })
     },
 
