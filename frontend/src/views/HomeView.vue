@@ -51,6 +51,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("tasks/setBc", []);
+    this.$store.dispatch("tasks/getData");
     this.$store.dispatch("tasks/setHomePage", true);
   },
   unmounted() {
