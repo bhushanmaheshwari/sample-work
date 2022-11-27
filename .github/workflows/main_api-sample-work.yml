@@ -17,7 +17,7 @@ on:
 # 2. Change these variables for your configuration:
 env:
   AZURE_WEBAPP_NAME: api-sample-work    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '/backend'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '16.x'                # set this to the node version to use
 
 jobs:
@@ -26,22 +26,23 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-    - uses: actions/checkout@master
+    - name: Cloning repository
+      uses: actions/checkout@master
+    
     - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
-        path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        cache: 'npm'
+        cache-dependency-path: backend/package-lock.json
+    
     - name: npm install, build, and test
       run: |
-        # Build and test the project, then
-        # deploy to Azure Web App.
         npm prune --production
         npm install
         npm run build --if-present
         # npm run test --if-present
-      with: 
-        path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+    
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with: 
