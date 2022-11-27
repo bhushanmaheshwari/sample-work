@@ -1,5 +1,5 @@
 <script>
-import architecture from "./../assets/about/about.png";
+// import architecture from "./about/about.png";
 import { ref } from "vue";
 export default {
   setup() {
@@ -14,7 +14,7 @@ export default {
     });
 
     return {
-      architecture,
+      // architecture,
       headerInfo,
       architectureInfo
     };
@@ -39,7 +39,7 @@ export default {
     <base-deepdive
       :title="architectureInfo.title"
       :subtitle="architectureInfo.subtitle"
-      :image="architecture"
+      :image="'./about/about.png'"
       :next-title="''"
       :next-subtitle="''"
       :next-to="''"

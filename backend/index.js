@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-const coaches = require('./routes/api/coaches');
-app.use('/api/coaches', coaches);
+const coaches = require('./routes/api/tasks');
+app.use('/api/tasks', coaches);
 
 
 const port = process.env.PORT || 5000;

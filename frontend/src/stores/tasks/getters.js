@@ -1,14 +1,21 @@
 export default {
-    task1(state) {
-        return state.task1;
+    getBasicTasks(state) {
+        const tasks = state.tasks;
+        return (tasks || []).map((task) => {
+            return {
+                taskKey: task.taskKey,
+                title: task.title,
+                shortDescription: task.shortDescription,
+                defaultPath: `${task.taskKey}/${task.defaultStep}`,
+                homepageImage: task.homepageImage
+            }
+        })
     },
-    task2(state) {
-        return state.task2;
-    },
+
     getBc(state) {
         return state.bc;
     },
     isHomePage(state) {
-        return state.isHomePage; 
+        return state.isHomePage;
     }
 };
