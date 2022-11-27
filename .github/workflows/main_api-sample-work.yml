@@ -34,6 +34,9 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     
+    - run: npm ci
+      working-directory: ./backend/
+
     - name: npm install, build, and test
       run: |
         npm prune --production
