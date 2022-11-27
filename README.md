@@ -1,3 +1,8 @@
+# SAMPLE WORK
+Demonstrating two work items - firstly, <b>strategizing the migration</b> from templating engine to a modern JavaScript framework, and, secondly, how can we <b>improve the productivity</b> of the engineering department. Additionally, there is page dedicated to the architecture of this website.
+
+Website link - <a href="https://asknicely.needlecompass.com/" target="_blank"> https://asknicely.needlecompass.com</a>
+
 
 # Strategy
 Faced with an existing system that uses a coupled templating engine like Smarty or Twig how would you go about planning and executing a strategy for migrating the product to a headless frontend? Assume an existing PHP backend REST API is already available or can be extended to support it.
