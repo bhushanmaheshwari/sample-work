@@ -17,14 +17,17 @@ on:
 # 2. Change these variables for your configuration:
 env:
   AZURE_WEBAPP_NAME: api-sample-work    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '/backend'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '16.x'                # set this to the node version to use
 
 jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: dev
+    environment: production
+    defaults:
+      run:
+        working-directory: /backend # The working directory path
     steps:
     - name: Cloning repository
       uses: actions/checkout@master
@@ -33,9 +36,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
-    
-    - run: npm ci
-      working-directory: ./backend/
 
     - name: npm install, build, and test
       run: |
