@@ -27,7 +27,7 @@ jobs:
     environment: production
     defaults:
       run:
-        working-directory: /backend # The working directory path
+        working-directory: ./backend/ 
     steps:
     - name: Cloning repository
       uses: actions/checkout@master
