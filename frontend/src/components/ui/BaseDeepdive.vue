@@ -8,7 +8,6 @@ export default {
     "nextTitle",
     "nextSubtitle",
     "nextTo",
-    "nextButtonText",
   ],
 };
 </script>

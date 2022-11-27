@@ -1,14 +1,3 @@
-<script>
-import hero from "./../../assets/home/hero-bg-home.jpeg";
-export default {
-  setup() {
-    return {
-      hero,
-    };
-  },
-};
-</script>
-
 <template>
   <section class="hero is-medium has-text-link is-white">
     <div class="hero-body welcome-text">
@@ -23,15 +12,10 @@ export default {
           </p>
         </div>
         <div class="column">
-          <img class="hero-bg" :src="hero" alt="hero-background" />
+          <img class="hero-bg" :src="'./home/hero-bg-home.jpeg'" alt="hero-background" />
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
-.hero-bg {
-  /* width: 80%; */
-}
-</style>

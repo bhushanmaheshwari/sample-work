@@ -1,16 +1,6 @@
 <script>
-// import { toRefs } from "vue";
 export default {
-  props: ["title", "subtitle", "buttontext", "to", "color", "image"],
-  //   setup(props) {
-  //     const { title, subtitle, buttontext, to } = toRefs(props);
-  //     return {
-  //       title,
-  //       subtitle,
-  //       buttontext,
-  //       to,
-  //     };
-  //   },
+  props: ["title", "buttontext", "to", "image"],
 };
 </script>
 
