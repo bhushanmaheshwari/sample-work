@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-   defaults:
+    defaults:
       run:
         working-directory: ./playwright/ 
     timeout-minutes: 60
