@@ -2,10 +2,11 @@ name: Cypress Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
 
 jobs:
   cypress-run:
+    name: Cypress build and Run
     defaults:
       run:
         working-directory: ./frontend/ 
