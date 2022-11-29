@@ -8,6 +8,7 @@ jobs:
   cypress-run:
     name: Cypress build and Run
     runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,6 +18,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.2 # use the explicit version number
         with:
-          working-directory: ./frontend/
-          build: npm run build
-          start: npm run dev
+          # Specify Browser since container image is compile with Firefox
+          browser: firefox
