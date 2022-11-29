@@ -2,21 +2,21 @@ name: Cypress Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
 
 jobs:
   cypress-run:
-    defaults:
-      run:
-        working-directory: ./frontend/ 
+    name: Cypress build and Run
     runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
+
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.2 # use the explicit version number
         with:
-          build: npm run build
-          start: npm start
+          working-directory: ./frontend/
+          browser: chrome
