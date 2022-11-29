@@ -19,4 +19,5 @@ jobs:
         uses: cypress-io/github-action@v4.2.2 # use the explicit version number
         with:
           # Specify Browser since container image is compile with Firefox
+          working-directory: ./frontend/
           browser: firefox
