@@ -116,7 +116,7 @@ export default {
                             "order": 1,
                             "stepKey": "highlevel",
                             "title": "Core Building blocks",
-                            "imageUrl": "/about/about.png",
+                            "imageUrl": "/about/about-new.png",
                             "description": "This website is hosted on Azure Static Web, empowered by Vue.js, Bulma CSS on front-end; node.js and expressjs as middle tier; and MongoDB as data store + data api + cognitive search for future scalability options.",
                             "bc": [
                                 { "text": "Home", "route": "/", "class": "" },
