@@ -1,44 +1,36 @@
-<script>
-// import highlevel from "./task1/deepdive.png";
-import { ref } from "vue";
+<script setup>
+import { onMounted, ref, watch } from "vue";
 import { useStore } from "vuex";
+import { useRoute } from "vue-router";
 
-export default {
-  props: ["taskKey", "stepKey"],
-  setup() {
-    const step = ref({});
-    const nextStep = ref({});
-    const store = useStore();
+const route = useRoute();
+const store = useStore();
 
-    const getStepData = (stepKey) => {
-      store
-        .dispatch("tasks/getStep", {
-          stepKey,
-        })
-        .then((response) => {
-          step.value = response.step;
-          nextStep.value = response.nextStep;
-        });
-    };
+const nextStep = ref({});
+const step = ref({});
 
-    return {
-      step,
-      nextStep,
-      getStepData,
-    };
-  },
-
-  watch: {
-    "$route.params.stepKey": function (stepKey) {
-      if (stepKey) {
-        this.getStepData(stepKey);
-      }
-    },
-  },
-  created() {
-    this.getStepData(this.stepKey);
-  },
+const getStepData = (stepKey) => {
+  store
+    .dispatch("tasks/getStep", {
+      stepKey,
+    })
+    .then((response) => {
+      step.value = response.step;
+      nextStep.value = response.nextStep;
+    });
 };
+
+onMounted(() => {
+  const stepKey = route.params.stepKey;
+  getStepData(stepKey);
+});
+
+watch(route, (r) => {
+  const stepKey = route.params.stepKey;
+  if (stepKey) {
+    getStepData(stepKey);
+  }
+});
 </script>
 
 <template>

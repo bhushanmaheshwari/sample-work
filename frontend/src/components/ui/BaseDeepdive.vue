@@ -1,15 +1,14 @@
-<script>
-// import { ref } from "vue";
-export default {
-  props: [
-    "title",
-    "subtitle",
-    "image",
-    "nextTitle",
-    "nextSubtitle",
-    "nextTo",
-  ],
-};
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps([
+  "title",
+  "subtitle",
+  "image",
+  "nextTitle",
+  "nextSubtitle",
+  "nextTo",
+]);
+
 </script>
 
 <template>

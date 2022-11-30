@@ -1,39 +1,29 @@
-<script>
-import { ref } from "vue";
+<script setup>
+import { ref, defineProps, onUpdated, onBeforeMount } from "vue";
 import { gsap } from "gsap";
 import logo from "./../../assets/logo.png";
 
-export default {
-  props: {
-    largeMode: {
-      default: false,
-      type: Boolean,
-      required: false,
-    },
-  },
-  setup() {
-    const developer = ref("Bhushan Maheshwari");
-    const animate = () => {
-      gsap.to(".animation-box", { rotation: 360, duration: 5, repeat: 5 });
-    };
-    const downloadFile =
-      "/Work Sample - Final Version - Bhushan Maheshwari.pdf";
-
-    return {
-      logo,
-      developer,
-      animate,
-      downloadFile,
-    };
-  },
-  updated() {
-    this.animate();
-  },
-
-  beforeMount() {
-    this.animate();
-  },
+const developer = ref("Bhushan Maheshwari");
+const animate = () => {
+  gsap.to(".animation-box", { rotation: 360, duration: 5, repeat: 5 });
 };
+const downloadFile = "/Work Sample - Final Version - Bhushan Maheshwari.pdf";
+
+const props = defineProps({
+  largeMode: {
+    default: false,
+    type: Boolean,
+    required: false,
+  },
+});
+
+onUpdated(() => {
+  animate();
+});
+
+onBeforeMount(() => {
+  animate();
+});
 </script>
 
 <template>

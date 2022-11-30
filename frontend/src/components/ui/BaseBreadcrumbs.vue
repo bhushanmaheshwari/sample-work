@@ -1,7 +1,6 @@
-<script>
-export default {
-  props: ["bc"]
-};
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["bc"]);
 </script>
 
 <template>

@@ -1,26 +1,23 @@
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  props: ["taskKey", "stepKey"],
-  setup() {
-    const taskTitle = ref("");
-    const taskDesc = ref("");
-    return {
-      taskTitle,
-      taskDesc,
-    };
-  },
-  created() {
-    this.$store
-      .dispatch("tasks/getTask", {
-        taskKey: this.taskKey,
-      })
-      .then((response) => {
-        this.taskTitle = response.task.title;
-        this.taskDesc = response.task.longDescription;
-      });
-  },
-};
+import { useStore } from "vuex";
+import { useRoute } from "vue-router";
+
+const taskTitle = ref("");
+const taskDesc = ref("");
+
+const store = useStore();
+const route = useRoute();
+
+const taskKey = route.params.taskKey;
+store
+  .dispatch("tasks/getTask", {
+    taskKey: taskKey,
+  })
+  .then((response) => {
+    taskTitle.value = response.task.title;
+    taskDesc.value = response.task.longDescription;
+  });
 </script>
 
 <template>
