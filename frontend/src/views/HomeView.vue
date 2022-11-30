@@ -1,35 +1,27 @@
-<script>
+<script setup>
 import HomeBanner from "./../components/home/HomeBanner.vue";
 import HomeCard from "./../components/home/HomeCard.vue";
 import { useStore } from "vuex";
+import { onMounted, onUnmounted } from "vue";
 
-export default {
-  components: { HomeBanner, HomeCard },
+const store = useStore();
 
-  setup() {
-    const store = useStore();
-    const tasks = store.getters["tasks/getBasicTasks"];
-    const title = "Work Demo";
-    const description = `We will be discussing two work items - firstly, strategizing the
+const tasks = store.getters["tasks/getBasicTasks"];
+const title = "Work Demo";
+const description = `We will be discussing two work items - firstly, strategizing the
             migration from templating engine to a modern JavaScript framework,
             and, secondly, how can we improve the productivity of the
             engineering department. Additionally, if time permits, would like to
             briefly talk about the architecture of this demo website.`;
-    return {
-      tasks,
-      title,
-      description,
-    };
-  },
 
-  mounted() {
-    this.$store.dispatch("tasks/getData");
-    this.$store.dispatch("tasks/setHomePage", true);
-  },
-  unmounted() {
-    this.$store.dispatch("tasks/setHomePage", false);
-  },
-};
+onMounted(() => {
+  store.dispatch("tasks/getData");
+  store.dispatch("tasks/setHomePage", true);
+});
+
+onUnmounted(() => {
+  store.dispatch("tasks/setHomePage", false);
+});
 </script>
 
 <template>
