@@ -46,5 +46,5 @@ Let's have a sneak peek on the high-level architecture of the website, and would
 ### Core Building blocks
 This website is hosted on Azure Static Web, empowered by Vue.js, Bulma CSS on front-end; node.js and expressjs as middle tier; and MongoDB as data store + data api + cognitive search for future scalability options.
 <kbd>
-<img src="https://github.com/bhushanmaheshwari/sample-work/blob/fad6fdc35487a803ac00219a800123509bb4d322/frontend/public/about/about.png"/>
+<img src="https://github.com/bhushanmaheshwari/sample-work/blob/fad6fdc35487a803ac00219a800123509bb4d322/frontend/public/about/about-new.png"/>
 </kbd>
