@@ -1,23 +1,23 @@
-<script>
+<script setup>
 import SiteHeader from "./components/layout/SiteHeader.vue";
 import SiteFooter from "./components/layout/SiteFooter.vue";
+import { useStore } from "vuex";
+import { computed, watch } from "vue";
+import { useRoute } from "vue-router";
 
-export default {
-  components: { SiteHeader, SiteFooter },
-  computed: {
-    bc() {
-      return this.$store.getters["tasks/getBc"];
-    },
-    isHomePage() {
-      return this.$store.getters["tasks/isHomePage"];
-    },
-  },
-  watch: {
-    $route(to, from) {
-      window.scroll(0, 0);
-    },
-  },
-};
+const store = useStore();
+const route = useRoute();
+
+const bc = computed(() => {
+  return store.getters["tasks/getBc"];
+});
+const isHomePage = computed(() => {
+  return store.getters["tasks/isHomePage"];
+});
+
+watch(route, (to, from) => {
+  window.scroll(0, 0);
+});
 </script>
 
 <template>
