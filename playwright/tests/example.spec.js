@@ -5,7 +5,7 @@ test('Landing page', async ({ page }) => {
   await page.goto('https://asknicely.needlecompass.com/');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/ASKNICELY - Sample Work/);
+  await expect(page).toHaveTitle(/ASKNICELY - Work Sample/);
 });
 
 
