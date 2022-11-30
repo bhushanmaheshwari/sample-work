@@ -1,7 +1,6 @@
-<script>
-export default {
-  props: ["title", "buttontext", "to", "image"],
-};
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["title", "buttontext", "to", "image"]);
 </script>
 
 <template>

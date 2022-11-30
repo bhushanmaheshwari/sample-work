@@ -1,7 +1,6 @@
-<script>
-export default {
-  props: ["title", "subtitle", "titleimage"],
-};
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["title", "subtitle", "titleimage"]);
 </script>
 
 <template>
@@ -10,14 +9,5 @@ export default {
       <h1 class="title is-1 has-text-link-dark">{{ title }}</h1>
       <p class="subtitle is-4 my-2 local-title-desc" :innerHTML="subtitle"></p>
     </div>
-    <!-- <div>
-      <img :src="titleimage" :alt="title" />
-    </div> -->
   </div>
 </template>
-
-<style scoped>
-.local-title-desc {
-  /* max-width: 80%; */
-}
-</style>
